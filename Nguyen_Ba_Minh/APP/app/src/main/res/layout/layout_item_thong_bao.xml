@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:id="@+id/layoutThongBao">
+
+    <ImageView
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:id="@+id/ivHinhAnh"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_thong_bao_chua_xem" />
+
+    <LinearLayout
+        android:id="@+id/layoutContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@id/ivHinhAnh"
+        android:layout_toStartOf="@id/ivMenuMore"
+        android:orientation="vertical"
+        tools:ignore="UselessLeaf">
+
+        <TextView
+            android:id="@+id/tvTieuDe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="Thông báo"
+            android:textColor="@color/BlackPrimary"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvNoiDung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Nội dung thông báo..."
+            android:textColor="@color/Gray1Primary"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/ivMenuMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_more"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/tvNgayThongBao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivHinhAnh"
+        android:layout_marginTop="16dp"
+        android:alpha="0.5"
+        android:drawablePadding="10dp"
+        android:fontFamily="@font/inter_regular"
+        android:text="20-11-2022"
+        android:textColor="@color/BlackPrimary"
+        android:textSize="14sp"
+        app:drawableStartCompat="@drawable/ic_date_line_24_black"
+        tools:ignore="HardcodedText" />
+
+    <View
+        android:layout_marginTop="10dp"
+        android:id="@+id/viewLine1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tvNgayThongBao"
+        android:alpha="0.3"
+        android:background="@color/Gray1Primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</RelativeLayout>

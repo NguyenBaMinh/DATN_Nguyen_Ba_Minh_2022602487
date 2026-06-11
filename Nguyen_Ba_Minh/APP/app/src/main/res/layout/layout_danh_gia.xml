@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/imgGif"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/gif_danh_gia" />
+
+        <RatingBar
+            android:id="@+id/rtbDanhGia"
+            style=".5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:numStars="5"
+            android:theme="@style/RatingBar" />
+
+        <Button
+            android:id="@+id/btnDanhGia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bgr_btn_red_rd5"
+            android:fontFamily="@font/inter_bold"
+            android:text="Đánh giá"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvBoQua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="Bỏ qua"
+            android:textColor="@color/BluePrimary"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

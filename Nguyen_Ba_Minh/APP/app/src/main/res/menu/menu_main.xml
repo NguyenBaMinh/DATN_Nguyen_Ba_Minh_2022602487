@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_home"
+        android:title="Trang chủ"
+        android:icon="@drawable/ic_home_5_line"
+        tools:ignore="HardcodedText" />
+    <item android:id="@+id/menu_search"
+        android:title="Tìm kiếm"
+        android:icon="@drawable/ic_search_24"
+        tools:ignore="HardcodedText" />
+    <item android:id="@+id/menu_notification"
+        android:title="Thông báo"
+        android:icon="@drawable/ic_notification_3_line"
+        tools:ignore="HardcodedText" />
+    <item android:id="@+id/menu_setting"
+        android:title="Cài đặt"
+        android:icon="@drawable/ic_settings_3_line"
+        tools:ignore="HardcodedText" />
+</menu>

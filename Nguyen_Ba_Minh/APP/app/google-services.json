@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "163924833754",
+    "project_id": "thuoc-3e916",
+    "storage_bucket": "thuoc-3e916.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163924833754:android:7f9012ccf80ae62cc2fce3",
+        "android_client_info": {
+          "package_name": "app.edu.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXbdZYOfnk2aMl_eGkc-V_JtX4aBAyP6M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163924833754:android:d2b974cc10c6a4dcc2fce3",
+        "android_client_info": {
+          "package_name": "com.example.doanfood"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXbdZYOfnk2aMl_eGkc-V_JtX4aBAyP6M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

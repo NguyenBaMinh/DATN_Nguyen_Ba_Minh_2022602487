@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.LienHeActivity"
+    android:background="@color/GrayPrimary">
+
+
+    <androidx.appcompat.widget.Toolbar
+        app:title="Liên hệ"
+        app:titleTextAppearance="@style/fontToolBar"
+        app:titleTextColor="@color/WhitePrimary"
+        android:id="@+id/toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back_home_white" />
+
+    <ScrollView
+        android:id="@+id/scrollView6"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civHinhAnh"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/av_phu" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/civHinhAnh"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvTenNguoiDung"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="Hồ Minh Phú"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:drawableStart="@drawable/ic_mail_send_line"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="phuhm@gmail.com"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                        <TextView
+                            android:id="@+id/tvSDT"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:drawableStart="@drawable/ic_phone_line"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="0775098507"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvLienHePhu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Liên hệ"
+                        android:textColor="@color/BluePrimary"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/civHinhAnh2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/imageslh" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_toEndOf="@id/civHinhAnh2"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/tvTenNguoiDung2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="Lê Võ Vương"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:id="@+id/tvEmail2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:drawableStart="@drawable/ic_mail_send_line"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="levovuong@gmail.com"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                        <TextView
+                            android:id="@+id/tvSDT2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:drawableStart="@drawable/ic_phone_line"
+                            android:drawablePadding="10dp"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="09999999"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvLienHeTin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Liên hệ"
+                        android:layout_alignParentTop="true"
+                        android:textColor="@color/BluePrimary"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

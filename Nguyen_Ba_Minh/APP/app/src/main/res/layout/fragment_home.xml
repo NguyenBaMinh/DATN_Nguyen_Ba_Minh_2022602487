@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragment.HomeFragment">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Header with user info -->
+            <RelativeLayout
+                android:id="@+id/layoutHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@android:color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/hinhAnh"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/avatar_user" />
+
+                <LinearLayout
+                    android:id="@+id/layoutTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@+id/hinhAnh"
+                    android:orientation="vertical"
+                    tools:ignore="RelativeOverlap">
+
+                    <TextView
+                        android:id="@+id/tvHi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="Hello, Person"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="MILK TEA"
+                        android:textColor="#888888"
+                        android:textSize="12sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Service Icons Grid (8 icons in 2 rows) -->
+                <androidx.cardview.widget.CardView
+                android:id="@+id/cardServicesGrid"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutHeader">
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:columnCount="4"
+                    android:rowCount="3"
+                    android:useDefaultMargins="false">
+
+                    <!-- Row 1, Column 1: Bàn -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardBan"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#FFF5F0">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_ban_40"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Bàn"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 1, Column 2: Loại -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardLoaiThucUong"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#FFF5E6">
+
+                        <LinearLayout
+                android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_loai"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Loại"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 1, Column 3: Thức uống -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardThucUong"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#FFE6F0">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_thuc_uong"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Thức uống"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 1, Column 4: Nhân viên -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardNhanVien"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#E6F5FF">
+
+                        <LinearLayout
+                    android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_nv"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Nhân viên"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 2, Column 1: Hoá đơn -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardHoaDon"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#F0FFE6">
+
+                        <LinearLayout
+                    android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_hoadon"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Hoá đơn"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 2, Column 2: Duyệt -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDuyet"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#FFE6E6">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_hoadon"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Duyệt"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 2, Column 3: Doanh thu -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDoanhThu"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#E6FFE6">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_doanhthu"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Doanh thu"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 2, Column 4: Mang về -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardMangVe"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#F0E6FF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_doanhthu"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Mang về"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 3, Column 1: Đặt bàn (User only) -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardDatBan"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#FFE6CC">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_ban_24_brow"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Đặt bàn"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 3, Column 2: Bàn của tôi (User only) -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardQuanLyBanNguoiDung"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#E6CCFF">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_ban_40"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Bàn của tôi"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Row 3, Column 3: Hoá đơn của tôi (User only) -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardHoaDon2"
+                        android:layout_width="0dp"
+                        android:layout_height="90dp"
+                        android:layout_rowWeight="1"
+                        android:layout_columnWeight="1"
+                        android:layout_margin="4dp"
+                        android:visibility="gone"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        android:backgroundTint="#CCFFE6">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:src="@drawable/ic_quan_ly_hoadon"
+                                tools:ignore="ContentDescription" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:fontFamily="@font/inter_regular"
+                                android:text="Hoá đơn"
+                                android:textAlignment="center"
+                                android:textColor="@color/BlackPrimary"
+                                android:textSize="11sp"
+                                tools:ignore="HardcodedText" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </GridLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Hidden placeholder for compatibility -->
+            <View
+                android:id="@+id/linearLayoutDm1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cardServicesGrid" />
+
+            <View
+                android:id="@+id/linearLayoutDm2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayoutDm1" />
+
+            <View
+                android:id="@+id/linearLayoutDm3"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayoutDm2" />
+
+            <View
+                android:id="@+id/linearLayoutDm4"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayoutDm3" />
+
+            <View
+                android:id="@+id/cardBan2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/linearLayoutDm4" />
+
+            <!-- Banner/Carousel Section -->
+            <LinearLayout
+                android:id="@+id/layoutAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/linearLayoutDm4"
+                tools:ignore="UselessLeaf">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/vpSlideImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp" />
+                </androidx.cardview.widget.CardView>
+
+                <me.relex.circleindicator.CircleIndicator3
+                    android:id="@+id/circleIndicator3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                    app:ci_drawable="@drawable/custom_indicator" />
+            </LinearLayout>
+
+            <!-- "Don't Miss" Section Header -->
+            <RelativeLayout
+                android:id="@+id/layoutDontMissHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutAbout">
+
+                <TextView
+                    android:id="@+id/tvMenuThucUong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Đừng bỏ lỡ"
+                    android:textColor="@color/BlackPrimary"
+                    android:textSize="18sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Tất cả"
+                    android:textColor="@color/BrowPrimary"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText" />
+            </RelativeLayout>
+
+            <!-- Product RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerViewThucUong"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutDontMissHeader" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

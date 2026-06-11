@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="Cập nhật"
+        android:id="@+id/menu_update"
+        tools:ignore="HardcodedText" />
+    <item android:title="Xoá"
+        android:id="@+id/menu_delete"
+        tools:ignore="HardcodedText" />
+</menu>

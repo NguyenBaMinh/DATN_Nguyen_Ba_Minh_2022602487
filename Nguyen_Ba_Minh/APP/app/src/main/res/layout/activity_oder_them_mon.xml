@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ThemMonActivity">
+    
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarThemMon"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_back_home_white"
+        app:title="Thêm oder"
+        app:titleTextAppearance="@style/fontToolBar"
+        app:titleTextColor="@color/WhitePrimary" />
+
+    <!-- Loại món (Horizontal RecyclerView) -->
+    <TextView
+        android:id="@+id/tvLoaiMonTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Loại món"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarThemMon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewLoaiMon"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLoaiMonTitle" />
+
+    <!-- Danh sách món -->
+    <TextView
+        android:id="@+id/tvDanhSachMonTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tất cả món"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewLoaiMon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewThucUongOder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDanhSachMonTitle" />
+        
+</androidx.constraintlayout.widget.ConstraintLayout>

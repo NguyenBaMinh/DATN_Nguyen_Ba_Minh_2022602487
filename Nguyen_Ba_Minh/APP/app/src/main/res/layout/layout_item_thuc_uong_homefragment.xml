@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="150dp"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="3dp"
+    android:layout_margin="8dp"
+    android:id="@+id/cardView"
+    >
+    <LinearLayout
+        android:padding="16dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:ignore="UseCompoundDrawables">
+        <ImageView
+            android:id="@+id/ivHinhAnh"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/sample_data_hanghoa_cfmay"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvTenHangHoa"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:text="Cà phê máy"
+            android:fontFamily="@font/inter_regular"
+            android:textColor="@color/BlackPrimary"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tvGiaTien"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="25000VND"
+            android:background="@drawable/bgr_tv_orage"
+            android:fontFamily="@font/inter_bold"
+            android:textColor="@color/WhitePrimary"
+            android:textSize="14sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

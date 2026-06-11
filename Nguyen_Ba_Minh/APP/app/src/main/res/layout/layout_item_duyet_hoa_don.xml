@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="6dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F18E0E"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvMaHoaDon1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_bold"
+                android:text="Mã hóa đơn:"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvMaHoaDon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_bold"
+                android:text="HD07"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/titleGioVao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_date_line_24_white"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="20-12-2022 12:10:00"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutGioVao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="Giờ vào: "
+                android:textColor="@color/BlackPrimary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@id/tvGioVao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/ic_date_line_24_black"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="20-12-2022 12:10:00"
+                android:textColor="@color/BlackPrimary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutGioRa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layoutGioVao">
+
+            <TextView
+                android:id="@+id/tvGioVao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="Giờ ra: "
+                android:textColor="@color/BlackPrimary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvGioRa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:drawableStart="@drawable/ic_date_line_24_black"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="20-12-2022 12:10:00"
+                android:textColor="@color/BlackPrimary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvGiaTien1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="18dp"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Tổng tiền:"
+            android:textColor="@color/Brow1Primary"
+            android:textSize="19sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutGioRa"
+            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/tvGiaTien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="16dp"
+
+            android:fontFamily="@font/inter_regular"
+            android:text="59000VN"
+            android:textColor="@color/Brow1Primary"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layoutGioRa"
+            tools:ignore="HardcodedText,UseCompatTextViewDrawableXml" />
+
+        <TextView
+            android:id="@+id/tvChiTiet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="Xem chi tiết sản phẩm đã đặt"
+            android:textColor="@color/BluePrimary"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGiaTien"
+            tools:ignore="HardcodedText" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/tvChiTiet"
+            app:layout_goneMarginBottom="10dp">
+
+            <Button
+                android:id="@+id/btnDuyet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bgr_btn_brow1_rd5"
+                android:fontFamily="@font/inter_bold"
+                android:text="Duyệt"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnHuy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/bgr_btn_red_rd5"
+                android:fontFamily="@font/inter_bold"
+                android:text="Hủy"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

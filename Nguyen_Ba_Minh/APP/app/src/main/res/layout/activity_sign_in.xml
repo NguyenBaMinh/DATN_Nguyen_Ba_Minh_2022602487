@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.SignInActivity">
+
+    <ScrollView
+        android:scrollbars="none"
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/layoutFotter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layoutHeader"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UseCompoundDrawables">
+
+                <ImageView
+                    android:id="@+id/ivLogo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/images_transparent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/tvSlogan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="center_horizontal"
+                    android:text="@string/slogan_app"
+                    android:textColor="@color/BrowPrimary"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutBody"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="23dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutHeader"
+                tools:ignore="UselessLeaf">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUserName"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxStrokeColor="@color/BrowPrimary"
+                    app:hintTextColor="@color/BrowPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_use_fill_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="@string/ten_dang_nhap"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    app:boxStrokeColor="@color/BrowPrimary"
+                    app:hintTextColor="@color/BrowPrimary"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_password_fill_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="@string/mat_khau"
+                        android:inputType="textPassword"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tvQuenMatKhau"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:gravity="center_vertical|end"
+                    android:text="@string/qun_mat_khau"
+                    android:textColor="@color/BrowPrimary"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/bgr_btn_brow1_rd5"
+                    android:fontFamily="@font/inter_bold"
+                    android:padding="16dp"
+                    android:text="@string/dang_nhap"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/BrowPrimary" />
+
+                    <TextView
+                        android:id="@+id/tvHoacDangNhap"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:alpha="0.7"
+                        android:fontFamily="@font/inter_regular"
+                        android:gravity="center"
+                        android:text="@string/hoac_dang_nhap"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="@color/BrowPrimary" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutSignInWithFbGG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="32dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivSignInFB"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_sign_in_fb"
+                        tools:ignore="ContentDescription" />
+
+                    <ImageView
+                        android:id="@+id/ivSignInGG"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_weight="1"
+                        android:src="@drawable/ic_sign_in_gg"
+                        tools:ignore="ContentDescription" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/layoutFotter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:alpha="0.7"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/ban_chua_co_tk"
+            android:textColor="@color/BlackPrimary"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/inter_bold"
+            android:text="@string/dang_ky"
+            android:textColor="@color/BluePrimary"
+            android:textSize="16sp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

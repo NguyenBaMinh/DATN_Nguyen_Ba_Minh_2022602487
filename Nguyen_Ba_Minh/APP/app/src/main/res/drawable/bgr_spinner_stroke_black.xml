@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="@color/WhitePrimary"/>
+                    <corners android:radius="5dp"/>
+                    <stroke android:color="#949494"
+                        android:width="1dp"/>
+                    <padding android:right="16dp"
+                        android:left="16dp"
+                        android:top="16dp"
+                        android:bottom="16dp"/>
+                </shape>
+            </item>
+            <item android:gravity="start" android:drawable="@drawable/ic_filter_brow"/>
+            <item android:gravity="end" android:drawable="@drawable/ic_arrow_drop_down_fill"/>
+        </layer-list>
+    </item>
+</selector>

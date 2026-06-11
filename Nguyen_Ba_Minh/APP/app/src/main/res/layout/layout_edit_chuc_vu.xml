@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardMaxElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:text="Cập nhật thông tin"
+            android:textAllCaps="true"
+            android:textColor="@color/BlackPrimary"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+
+      <RadioGroup
+          android:id="@+id/grChucVu"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+          <RadioButton
+              android:buttonTint="@color/BrowPrimary"
+              android:id="@+id/rbAdmin"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="Admin"
+              tools:ignore="HardcodedText" />
+          <RadioButton
+              android:layout_marginStart="16dp"
+              android:id="@+id/rbNhanVien"
+              android:buttonTint="@color/BrowPrimary"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="NhanVien"
+              tools:ignore="HardcodedText" />
+      </RadioGroup>
+
+        <Button
+            android:id="@+id/btnUpdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bgr_btn_red_rd5"
+            android:fontFamily="@font/inter_bold"
+            android:text="Cập nhật"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText" />
+
+        <TextView
+            android:id="@+id/tvBoQua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center"
+            android:text="Bỏ qua"
+            android:textColor="@color/BluePrimary"
+            android:textSize="16sp"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

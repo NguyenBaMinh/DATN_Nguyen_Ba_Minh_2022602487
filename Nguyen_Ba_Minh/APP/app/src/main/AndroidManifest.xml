@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="app.edu.app">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.APTCOFFEE"
+        tools:targetApi="31">
+
+        <activity
+            android:name="app.edu.app.ui.VNPayPaymentActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.ChuyenKhoanActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.TopSanPhamActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.QuenMatKhauActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.HoaDonNguoiDungActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.MangVeActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.DuyetActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.ThemMonActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.OderActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.ChiTietHoaDonActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarGray" />
+        <activity
+            android:name="app.edu.app.ui.CapNhatHangHoaActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.ThemHangHoaActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.ChiTietNhanVienActivity"
+            android:exported="false"
+            android:theme="@style/TranslucentStatusBar" />
+        <activity
+            android:name="app.edu.app.ui.CapNhatNhanVienActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.ThemNhanVienActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.SuaLoaiActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.ThemLoaiActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.ThietLapTaiKhoanActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarGray" />
+        <activity
+            android:name="app.edu.app.ui.LienHeActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.DoiMatKhauActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.HoaDonActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.DoanhThuActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.NhanVienActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.ThucUongActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.LoaiThucUongActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.QuanLyBanActivity"
+            android:exported="false" />
+        <activity
+            android:name="app.edu.app.ui.DatBanActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.QuanLyBanNguoiDungActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.SignUpActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.ui.SignInActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name="app.edu.app.MainActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarGray" />
+        <activity
+            android:name="app.edu.app.ui.ChiTietHoaDonMangVeActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarGray" />
+        <activity
+            android:name="app.edu.app.ui.SplashActivity"
+            android:exported="true"
+            android:theme="@style/AppStatusBarWhite">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

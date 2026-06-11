@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/WhitePrimary"
+    tools:context=".ui.ThemNhanVienActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/ic_back_home"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:id="@+id/layoutTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ivBack">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Thêm nhân viên"
+                    android:textAllCaps="true"
+                    android:textColor="@color/BrowPrimary"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/link_aptcoffee"
+                    android:textAllCaps="false"
+                    android:textColor="@color/BlackPrimary"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutFrom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:orientation="vertical"
+                android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutTitle"
+                tools:ignore="UselessLeaf">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMaNguoiDung"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxStrokeColor="@color/BrowPrimary"
+                    app:hintTextColor="@color/BrowPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_user_line_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="@string/ten_dang_nhap"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilHoVaTen"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    app:boxStrokeColor="@color/BrowPrimary"
+                    app:hintTextColor="@color/BrowPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_user_line_edit_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="@string/ho_va_ten"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilNgaySinh"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    app:boxStrokeColor="@color/BrowPrimary"
+                    app:hintTextColor="@color/BrowPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/tieNgaySinh"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_date_line_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="@string/ngay_sinh"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="@string/gioi_tinh"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp" />
+
+                    <RadioGroup
+                        android:id="@+id/rdgGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/rdNam"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@color/BrowPrimary"
+                            android:checked="true"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="@string/nam"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="14sp" />
+
+                        <RadioButton
+                            android:id="@+id/rdNu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:buttonTint="@color/BrowPrimary"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="@string/nu"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="14sp" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:boxStrokeColor="@color/BrowPrimary"
+                    app:hintTextColor="@color/BrowPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_email_line_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="@string/email"
+                        android:inputType="textPersonName"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMatKhau"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="15dp"
+                    app:boxStrokeColor="@color/BrowPrimary"
+                    app:hintTextColor="@color/BrowPrimary"
+                    app:passwordToggleEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableStart="@drawable/ic_password_line_24"
+                        android:drawablePadding="10dp"
+                        android:fontFamily="@font/inter_regular"
+                        android:hint="@string/mat_khau"
+                        android:inputType="textPassword"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnAdd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bgr_btn_brow1_rd5"
+                    android:fontFamily="@font/inter_bold"
+                    android:padding="16dp"
+                    android:text="@string/them"
+                    android:textColor="@color/WhitePrimary"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

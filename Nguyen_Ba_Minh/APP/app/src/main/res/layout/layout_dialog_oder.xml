@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bgr_dialog_bottom"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    >
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imgGif"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/gif_danh_gia" />
+
+    <Button
+        android:id="@+id/btnOder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bgr_btn_red_rd5"
+        android:fontFamily="@font/inter_bold"
+        android:text="Oder"
+        android:textColor="@color/white"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/tvBoQua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/inter_regular"
+        android:gravity="center"
+        android:text="Bỏ qua"
+        android:textColor="@color/BluePrimary"
+        android:textSize="16sp"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

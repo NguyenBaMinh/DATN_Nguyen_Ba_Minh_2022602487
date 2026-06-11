@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    tools:context=".ui.ChuyenKhoanActivity">
+
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/BrowPrimary"
+        android:elevation="4dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/inter_bold"
+                android:text="Thanh Toán"
+                android:textColor="@color/WhitePrimary"
+                android:textSize="20sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- Total Amount Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                app:cardBackgroundColor="@color/BrowPrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="32dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvInfoTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Tổng tiền thanh toán"
+                        android:textColor="@color/WhitePrimary"
+                        android:textSize="16sp"
+                        android:alpha="0.9"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvchuyenkhoan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="000.000 đ"
+                        android:textColor="@color/WhitePrimary"
+                        android:textSize="36sp"
+                        android:letterSpacing="0.02"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Payment Info Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPaymentInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/WhitePrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="20dp">
+
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="24dp"
+                            android:background="@color/BrowPrimary"
+                            android:layout_marginEnd="12dp" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="Thông tin chuyển khoản"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="18sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/bgr_divider_gradient"
+                        android:layout_marginBottom="20dp" />
+
+                    <!-- Bank Info -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="Ngân hàng"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="MILK TEA"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/bgr_divider_gradient"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Account Number -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="Số tài khoản"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="9999 8888 7777 6666"
+                            android:textColor="@color/BrowPrimary"
+                            android:textSize="18sp"
+                            android:letterSpacing="0.05"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/bgr_divider_gradient"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Account Holder -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="Chủ tài khoản"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="MILK TEA"
+                            android:textColor="@color/BlackPrimary"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@drawable/bgr_divider_gradient"
+                        android:layout_marginBottom="16dp" />
+
+                    <!-- Content -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="Nội dung"
+                            android:textColor="#666666"
+                            android:textSize="14sp"
+                            tools:ignore="HardcodedText" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_regular"
+                            android:text="[Mã hoá đơn]"
+                            android:textColor="#999999"
+                            android:textSize="14sp"
+                            android:fontStyle="italic"
+                            tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Note Section -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFF9E6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Vui lòng hoàn tất thanh toán trước khi xác nhận"
+                        android:textColor="#856404"
+                        android:textSize="14sp"
+                        android:lineSpacingExtra="4dp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Confirm Button -->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/tvctieptuc"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/bgr_btn_payment_primary"
+                android:textColor="@color/WhitePrimary"
+                android:fontFamily="@font/inter_bold"
+                android:padding="12dp"
+                android:text="Xác nhận đã thanh toán"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:elevation="4dp"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

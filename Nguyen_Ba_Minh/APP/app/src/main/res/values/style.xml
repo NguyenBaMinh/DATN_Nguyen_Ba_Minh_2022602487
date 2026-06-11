@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--  Theme Status Bar white  -->
+    <style name="AppStatusBarWhite" parent="Theme.APTCOFFEE">
+        <item name="android:statusBarColor">@color/WhitePrimary</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+    <!--  Theme Status Bar Gray -->
+    <style name="AppStatusBarGray" parent="Theme.APTCOFFEE">
+        <item name="android:statusBarColor">@color/GrayPrimary</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+    <!--  Theme MainActivity-->
+    <style name="MainActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/GrayPrimary</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+    <!--Font family bottomNavigationView-->
+    <style name="BottomNavigationViewTextStyle">
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- Custom toast -->
+    <style name="successfulToast">
+        <item name="stTextColor">#fff</item>
+        <item name="stFont">@font/inter_regular</item>
+        <item name="stTextSize">15sp</item>
+        <item name="stColorBackground">@color/GreenPrimary</item>
+        <item name="stIconStart">@drawable/ic_checkbox_circle_line</item>
+        <item name="stRadius">30dp</item>
+    </style>
+
+    <style name="errorToast">
+        <item name="stTextColor">#fff</item>
+        <item name="stFont">@font/inter_regular</item>
+        <item name="stTextSize">15sp</item>
+        <item name="stColorBackground">@color/YellowPrimary</item>
+        <item name="stIconStart">@drawable/ic_error_warning_line</item>
+        <item name="stRadius">30dp</item>
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/Gray1Primary</item>
+        <item name="colorControlActivated">@color/YellowPrimary</item>
+    </style>
+    <!-- Font style family toolbar   -->
+    <style name="fontToolBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorAccent">@color/Brow1Primary</item>
+
+        <!-- No need to override 'datePickerStyle' -->
+        <!-- <item name="android:datePickerStyle">@style/MyDatePickerStyle</item> -->
+    </style>
+
+    <style name="AlertDialogTheme" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/BluePrimary</item>
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="TranslucentStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_in_bottom</item>
+        <item name="android:windowExitAnimation">@anim/anim_out_bottom</item>
+    </style>
+</resources>

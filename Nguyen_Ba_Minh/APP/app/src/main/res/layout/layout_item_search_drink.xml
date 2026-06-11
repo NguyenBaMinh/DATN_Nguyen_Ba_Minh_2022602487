@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Hình ảnh sản phẩm -->
+        <ImageView
+            android:id="@+id/ivHinhAnh"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/sample_data_hanghoa_cfmay"
+            tools:ignore="ContentDescription" />
+
+        <!-- Thông tin sản phẩm -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Tên sản phẩm -->
+            <TextView
+                android:id="@+id/tvTenHangHoa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/inter_bold"
+                android:maxLines="2"
+                android:text="Cà phê sữa"
+                android:textColor="@color/BlackPrimary"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Giá tiền -->
+            <TextView
+                android:id="@+id/tvGiaTien"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_bold"
+                android:text="20.000đ"
+                android:textColor="@color/BrowPrimary"
+                android:textSize="15sp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Trạng thái (optional) -->
+            <TextView
+                android:id="@+id/tvTrangThai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Còn hàng"
+                android:textColor="@color/GreenPrimary"
+                android:textSize="12sp"
+                android:visibility="gone"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+

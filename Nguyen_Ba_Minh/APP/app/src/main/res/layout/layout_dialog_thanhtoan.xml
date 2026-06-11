@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bgr_dialog_bottom"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="24dp">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="4dp"
+                android:background="@drawable/bgr_divider_gradient"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="#CCCCCC" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="THANH TOÁN HOÁ ĐƠN"
+                android:textColor="@color/BrowPrimary"
+                android:textSize="20sp"
+                android:letterSpacing="0.05"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+
+        <!-- Invoice Info Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/WhitePrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <!-- Mã Đơn -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Mã đơn"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvMaHoaDon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="HD07750985071"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/bgr_divider_gradient"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Mã Bàn -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Mã bàn"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvMaBan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="B01"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="16sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/bgr_divider_gradient"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Ngày đặt -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Ngày đặt"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvGioVao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="20-19-2002 12:02:03"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/bgr_divider_gradient"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Thời gian hoàn thành dự kiến -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Thời gian hoàn thành dự kiến"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvGioVao1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="15 phút"
+                        android:textColor="@color/BrowPrimary"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@drawable/bgr_divider_gradient"
+                    android:layout_marginBottom="16dp" />
+
+                <!-- Người đặt -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/inter_regular"
+                        android:text="Người đặt"
+                        android:textColor="#666666"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+
+                    <TextView
+                        android:id="@+id/tvnguoidat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_bold"
+                        android:text="admin"
+                        android:textColor="@color/BlackPrimary"
+                        android:textSize="14sp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Total Amount Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="@color/BrowPrimary">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="Tổng tiền thanh toán"
+                    android:textColor="@color/WhitePrimary"
+                    android:textSize="14sp"
+                    android:alpha="0.9"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvTongTien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="200,000 VND"
+                    android:textColor="@color/WhitePrimary"
+                    android:textSize="28sp"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/tvHoaDonCUoi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="200,000 VND"
+                    android:textColor="@color/WhitePrimary"
+                    android:textSize="16sp"
+                    android:alpha="0.8"
+                    android:visibility="gone"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Note Section -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="#F8F9FA">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_bold"
+                    android:text="Ghi chú"
+                    android:textColor="@color/BlackPrimary"
+                    android:textSize="14sp"
+                    android:layout_marginBottom="8dp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/edtGhiChu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="80dp"
+                    android:fontFamily="@font/inter_regular"
+                    android:hint="Nhập ghi chú (nếu có)..."
+                    android:textColor="@color/BlackPrimary"
+                    android:textColorHint="#999999"
+                    android:textSize="14sp"
+                    android:background="@drawable/bgr_edittext_stroke_black"
+                    android:padding="12dp"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- VNPay Payment Button -->
+            <Button
+                android:id="@+id/btnPayVNPay"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bgr_btn_payment_primary"
+                android:fontFamily="@font/inter_bold"
+                android:text="Thanh toán VNPay"
+                android:textColor="@color/WhitePrimary"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:elevation="4dp"
+                android:layout_marginBottom="12dp"
+                tools:ignore="HardcodedText" />
+
+            <!-- Cash Payment Button -->
+            <Button
+                android:id="@+id/btnPay"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bgr_btn_brow1_rd5"
+                android:fontFamily="@font/inter_bold"
+                android:text="Thanh toán tiền mặt"
+                android:textColor="@color/WhitePrimary"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:elevation="4dp"
+                android:layout_marginBottom="12dp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/tvCancle"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="center"
+                android:fontFamily="@font/inter_regular"
+                android:text="Hủy"
+                android:textColor="@color/BluePrimary"
+                android:textSize="16sp"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                tools:ignore="HardcodedText" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
